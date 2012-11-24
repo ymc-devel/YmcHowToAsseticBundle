@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Asset delivery with Assetic</title>
+
+    {% stylesheets '@YmcHowToAsseticBundle/Resources/public/css/*' output='css/*.css'%}
+        <link rel="stylesheet" href="{{ asset_url }}" />
+    {% endstylesheets %}
+
+    {% stylesheets '@YmcHowToAsseticBundle/Resources/public/less/*'
+    filter='less,cssrewrite,yui_css'
+    output='css/compiled/main.css'%}
+        <link rel="stylesheet" href="{{ asset_url }}" media="screen"/>
+    {% endstylesheets %}
+
+    {% stylesheets '@YmcHowToAsseticBundle/Resources/public/js/*' output='js/*.js'%}
+        <link rel="stylesheet" href="{{ asset_url }}" />
+    {% endstylesheets %}
+
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+<div class="container-narrow">
+
+    <div class="masthead">
+        <ul class="nav nav-pills pull-right">
+            <li><a href="http://www.ymc.ch/blog">Blog</a></li>
+            <li><a href="http://www.ymc.ch/ueber">About YMC</a></li>
+            <li><a href="http://www.ymc.ch/author/frank-neff">About the Author</a></li>
+        </ul>
+        <h3 class="muted">Symfony 2 insights</h3>
+    </div>
+
+    <hr>
+
+    <div class="jumbotron">
+        <h1>Asset Management with Assetic</h1>
+    </div>
+
+    <hr>
+
+    <div class="row-fluid marketing">
+        <div class="span12">
+            <h4>Included Stylesheets</h4>
+            <p>
+                {% stylesheets '@YmcHowToAsseticBundle/Resources/public/css/*' output='css/*.css'%}
+                    <span>&lt;link rel="stylesheet" href="{{ asset_url }}" /&gt;</span><br />
+                {% endstylesheets %}
+            </p>
+
+            <h4>Compressed Stylesheets</h4>
+            <p>
+                {% stylesheets '@YmcHowToAsseticBundle/Resources/public/less/*'
+                filter='less,cssrewrite,yui_css'
+                output='css/compiled/main.css'%}
+                <span>&lt;link rel="stylesheet" href="{{ asset_url }}" media="screen"/&gt;</span><br />
+                {% endstylesheets %}
+            </p>
+
+            <h4>Included JavaScripts</h4>
+            <p>
+                {% stylesheets '@YmcHowToAsseticBundle/Resources/public/js/*' output='js/*.js'%}
+                <span>&lt;link rel="stylesheet" href="{{ asset_url }}" /&gt;</span><br />
+                {% endstylesheets %}
+            </p>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="footer">
+        <p>&copy; Company 2012</p>
+    </div>
+
+</div>
+</body>
+</html>
+

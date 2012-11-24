@@ -1,0 +1,7 @@
+parameters:
+#    ymc_how_to_assetic.example.class: Ymc\HowToAsseticBundle\Example
+
+services:
+#    ymc_how_to_assetic.example:
+#        class: %ymc_how_to_assetic.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

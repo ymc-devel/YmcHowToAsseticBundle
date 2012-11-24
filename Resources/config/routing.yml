@@ -1,0 +1,3 @@
+ymc_how_to_assetic_homepage:
+    pattern:  /howto/assetic
+    defaults: { _controller: YmcHowToAsseticBundle:Default:index }
