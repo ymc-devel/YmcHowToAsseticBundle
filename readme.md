@@ -1,7 +1,7 @@
 # YmcHowToAsseticBundle
 
 ## Description
-This is Demo-Code for the blogpost **Symfony2 insights – Assetic** on http://ymc.ch
+This is **demo-code** for the blogpost **Symfony2 insights – Assetic** on http://ymc.ch
 
 ## Links
 German: http://www.ymc.ch/symfony2-insights-assetic
@@ -9,8 +9,8 @@ German: http://www.ymc.ch/symfony2-insights-assetic
 English: http://www.ymc.ch/en/symfony2-insights-assetic
 
 ## Configuration
-Checkout this Repository into the ```src/``` directory in your Smyfony2 Standard installation.
-You have to change the Assetic-Configuration in ```app/config/config.yml``` like this:
+Checkout this repository into the ```src/``` directory in your Smyfony2 Standard installation.
+You have to change the configuration-part for assetic in ```app/config/config.yml``` like this:
 
     # app/config/config.yml
     assetic:
